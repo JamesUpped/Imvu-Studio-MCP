@@ -1,5 +1,38 @@
 # Development notes
 
+## 2026-10-24 — Full editor planning
+
+The user requested a simplified, fully interactive editor whose UI and MCP can
+edit all applicable Studio options on an imported mesh, synchronize into Studio,
+and complete the upload. The user explicitly requested planning before further
+implementation and confirmed **Studio settings first; geometry tools later**.
+The preferred submission-versus-publication endpoint remains an open choice;
+the plan covers both and proposes verified submission as the default until chosen.
+
+The proposed architecture and release gates are in `EDITOR_PLAN.md`: one local
+service and project model for the UI/MCP, a versioned capability registry, staged
+changes with Studio readback, the actual Studio viewport, and a submission state
+machine with receipt/PID verification and uncertain-outcome reconciliation.
+Complete coverage must be measured per applicable control and Studio version;
+the current 17 tools do not establish a feature-parity percentage.
+
+Research used official Edit Mode, feature, material/transparency, scaling, Info,
+import, submission and publication guidance, plus read-only local component
+inspection. Submission, external product-page publishing and peer review are
+distinct states. Account-gated controls and future Studio changes require
+explicit compatibility coverage. No native app sources or user data were copied.
+
+GitHub's initial workflow run `40158521870`, previously queued, is now reported
+failed for all four OS/Python jobs with no recorded steps. Available job-log
+retrieval returned not found; the cause is not established. Investigation is a
+Phase 0 requirement. The prior local result remains 17 passed, 1 skipped; there
+was no new runtime test run for this documentation-only update.
+
+Only planning documentation, its README link and the changelog are changed. No
+editor implementation, Studio mutation, product submission or paid operation
+was performed in this turn. Implementation should start with the documented
+Phase 0 once the user has reviewed the plan.
+
 ## 2026-10-24 — Initial implementation
 
 ### Requested outcome

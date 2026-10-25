@@ -78,6 +78,7 @@ sources and version-specific findings.
 - [Tool reference](docs/TOOLS.md)
 - [Architecture, boundaries, and recovery](docs/ARCHITECTURE.md)
 - [Detailed notes and validation status](docs/DEVELOPMENT_NOTES.md)
+- [Proposed full editor and upload plan](docs/EDITOR_PLAN.md)
 - [Changelog](CHANGELOG.md)
 
 ```powershell
