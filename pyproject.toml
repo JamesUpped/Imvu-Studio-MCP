@@ -1,0 +1,25 @@
+[build-system]
+requires = ["hatchling>=1.27,<2"]
+build-backend = "hatchling.build"
+
+[project]
+name = "imvu-studio-mcp"
+version = "0.1.0"
+description = "Local MCP tools for IMVU Studio projects, textures, and optional Electron UI control"
+readme = "README.md"
+requires-python = ">=3.11"
+dependencies = ["mcp==2.3.0", "Pillow==12.2.0", "defusedxml==0.7.1"]
+
+[project.optional-dependencies]
+ui = ["playwright==1.58.0"]
+dev = ["pytest==9.0.2"]
+
+[project.scripts]
+imvu-studio-mcp = "imvu_studio_mcp.__main__:main"
+
+[tool.hatch.build.targets.wheel]
+packages = ["src/imvu_studio_mcp"]
+
+[tool.pytest.ini_options]
+testpaths = ["tests"]
+pythonpath = ["src"]
