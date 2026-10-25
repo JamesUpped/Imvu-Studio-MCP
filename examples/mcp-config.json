@@ -1,0 +1,13 @@
+{
+  "mcpServers": {
+    "imvu_studio": {
+      "command": "C:\\Your\\Imvu-Studio-MCP\\.venv\\Scripts\\python.exe",
+      "args": [
+        "-m", "imvu_studio_mcp",
+        "--project-root", "C:\\Your\\IMVU Studio Projects",
+        "--asset-root", "C:\\Your\\Texture Sources",
+        "--enable-ui", "--enable-writes"
+      ]
+    }
+  }
+}
